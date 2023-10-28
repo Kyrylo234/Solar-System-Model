@@ -33,17 +33,13 @@ public class OrbitingSolarObject extends SolarObject{
      */
     public void incrementAngle(){
         angle = angle + velocity;
-        if(angle>360){
+        if(angle>=360){
             angle = angle - 360;
         }
     }
 
-    public void increaseDistance(double inputNum){
-        distance = distance * (inputNum);
-    }
-    
-    public void decreaseDistance(double inputNum){
-        distance = distance / (inputNum);
+    public void changeDistance(double inputNum){
+        distance = inputNum;
     }
 
     /**

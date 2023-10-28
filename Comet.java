@@ -19,18 +19,13 @@ public class Comet extends OrbitingSolarObject{
 
     public void elipticalOrbit(){
         incrementAngle();
-        // if(maxInitialAngle > getAngle() && minInitialAngle < getAngle()){
-        //     //do nothing
-        // }else if(maxInitialAngle <= getAngle() && getAngle() <= (maxInitialAngle + 90)){
-        //     increaseDistance(1.1);
-        // }
-        // else{
-        //     decreaseDistance(1.1);
-        // }
-        // System.out.println(getDistance());
-
-
-        //if(initialAngle)
+        if(initialAngle <= getAngle() && maxInitialAngle >= getAngle()){
+            changeDistance(1+getDistance());
+        }else if(maxInitialAngle < getAngle() && getAngle() < 360){
+            changeDistance(getDistance()-1);
+        }
+        System.out.println(getAngle());
+        System.out.println(getDistance());
         
     }
 }

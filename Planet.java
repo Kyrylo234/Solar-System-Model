@@ -3,7 +3,7 @@ public class Planet extends OrbitingSolarObject{
      * This is the Planet class
      * @author Kyrylo Postupalenko
      */
-    private int numberOfMoons;
+    private int numberOfMoons = 0;
     private Moon[] moons;
 
     /**
@@ -18,7 +18,6 @@ public class Planet extends OrbitingSolarObject{
      */
     public Planet(double inputDiameter, String inputColour, double inputDistance, double inputAngle, double inputVelcity){
         super(inputDiameter, inputColour, inputDistance, inputAngle, inputVelcity);
-        numberOfMoons = 0;
     }
 
     /**
@@ -34,7 +33,7 @@ public class Planet extends OrbitingSolarObject{
      * @param inputMoon the Moon class to be added to the array
      */
     public void addMoonToArray(Moon inputMoon){
-        if(moons.length <= (numberOfMoons+1)){
+        if(moons.length >= (numberOfMoons+1)){
             moons[numberOfMoons] = inputMoon;
             numberOfMoons++; 
         }
